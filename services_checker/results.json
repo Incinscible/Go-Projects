@@ -1,0 +1,96 @@
+{
+  "websites": [
+    {
+      "link": "https://youtube.com",
+      "status": true
+    },
+    {
+      "link": "https://google.com",
+      "status": true
+    },
+    {
+      "link": "https://wikipedia.org",
+      "status": true
+    },
+    {
+      "link": "https://ladsqjhgdjqshvfbjshvcjhqvd.com",
+      "status": false
+    },
+    {
+      "link": "https://facebook.com",
+      "status": true
+    },
+    {
+      "link": "https://amazon.com",
+      "status": true
+    },
+    {
+      "link": "https://yahoo.com",
+      "status": true
+    },
+    {
+      "link": "https://twitter.com",
+      "status": true
+    },
+    {
+      "link": "https://slashdot.org",
+      "status": true
+    },
+    {
+      "link": "https://google.co.in",
+      "status": true
+    },
+    {
+      "link": "https://taobao.com",
+      "status": true
+    },
+    {
+      "link": "https://linkedin.com",
+      "status": true
+    },
+    {
+      "link": "https://qq.com",
+      "status": true
+    },
+    {
+      "link": "https://google.co.jp",
+      "status": true
+    },
+    {
+      "link": "https://sina.com.cn",
+      "status": true
+    },
+    {
+      "link": "https://baidu.com",
+      "status": true
+    },
+    {
+      "link": "https://ebay.com",
+      "status": true
+    },
+    {
+      "link": "https://google.de",
+      "status": true
+    },
+    {
+      "link": "https://bing.com",
+      "status": true
+    },
+    {
+      "link": "https://vk.com",
+      "status": true
+    },
+    {
+      "link": "https://yandex.ru",
+      "status": true
+    },
+    {
+      "link": "https://instagram.com",
+      "status": true
+    },
+    {
+      "link": "https://weibo.com",
+      "status": true
+    }
+  ]
+}
