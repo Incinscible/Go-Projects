@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
+	"strconv"
 	"time"
 
 	pb "fibonacci/fibonacci"
@@ -21,11 +23,11 @@ func main() {
 
 	client := pb.NewFibonacciServiceClient(conn)
 
-	number := int32(10)
+	number, _ := strconv.Atoi(os.Args[1])
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
-	response, err := client.GetFibonacci(ctx, &pb.FibonacciRequest{Number: number})
+	response, err := client.GetFibonacci(ctx, &pb.FibonacciRequest{Number: int32(number)})
 	if err != nil {
 		log.Fatalf("Erreur lors de la requête : %v", err)
 	}
