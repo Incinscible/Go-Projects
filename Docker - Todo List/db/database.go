@@ -6,19 +6,16 @@ import (
 	"os"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
 
 var DB *sqlx.DB
 
 func InitDB() {
-
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Can't load .env file: %v", err)
+	if DB != nil {
+		log.Println("Database already initialized")
+		return
 	}
-
 	host := os.Getenv("DB_HOST")
 	port := 5432
 	user := "user"
@@ -26,6 +23,7 @@ func InitDB() {
 	dbname := "todolist"
 	connStr := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 
+	var err error
 	DB, err = sqlx.Connect("postgres", connStr)
 	if err != nil {
 		panic(err)
