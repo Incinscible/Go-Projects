@@ -13,8 +13,12 @@ func main() {
 	db.InitDB()
 
 	router := mux.NewRouter()
-	router.HandleFunc("/tasks", handlers.GetTasks).Methods("GET")
-	router.HandleFunc("/task", handlers.CreateTask).Methods("POST")
+	tasksRouter := router.PathPrefix("/tasks").Subrouter()
+	tasksRouter.HandleFunc("", handlers.GetTasks).Methods("GET")
+	tasksRouter.HandleFunc("/{task_id}", handlers.GetTask).Methods("GET")
+	tasksRouter.HandleFunc("", handlers.CreateTask).Methods("POST")
+	tasksRouter.HandleFunc("/{task_id}", handlers.UpdateTask).Methods("PUT")
+	tasksRouter.HandleFunc("/{task_id}", handlers.DeleteTask).Methods("DELETE")
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
