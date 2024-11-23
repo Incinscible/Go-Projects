@@ -6,3 +6,9 @@ Description : Déployer une simple application web avec une base de données en 
 - [ ] Créer un fichier docker-compose.yml pour orchestrer l'application et une base de données PostgreSQL.
 - [ ] Ajouter un Dockerfile pour construire l'image Go.
 - [ ] Tester le déploiement localement avec docker-compose up.
+
+En plus :
+
+- [ ] Authentification JWT pour sécuriser l'accès.
+- [ ] Créer une interface frontend avec React pour interagir avec l'API.
+- [ ] Ajouter des tests d'intégration pour vérifier les fonctionnalités critiques.
